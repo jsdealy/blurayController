@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import broadlink
 import pickle
 from sys import argv
