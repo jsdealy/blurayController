@@ -26,6 +26,8 @@ packets = {
     "fastforward": b'x00',
     "rewind": b'x00',
     "eject": b'x00',
+    "bluraypower": b'x00',
+    "tvpower": b'x00',
 }
 
 try:
