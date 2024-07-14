@@ -11,7 +11,7 @@ deviceIP = ""
 with open("/home/justin/.broadlinkIP") as file:
     deviceIP = file.readline()
 
-if len(argv) >= 2 and argv[2].startswith("192.168"):
+if len(argv) >= 3 and argv[2].startswith("192.168"):
     deviceIP = argv[2]
 
 count = 0
