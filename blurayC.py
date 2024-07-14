@@ -7,8 +7,11 @@ if len(argv) == 0:
     print("No command given.")
     exit(1)
 
-deviceIP = "192.168.1.139"
-if len(argv) >= 2 and argv[1].startswith("192.168"):
+deviceIP = ""
+with open("/home/justin/.broadlinkIP") as file:
+    deviceIP = file.readline()
+
+if len(argv) >= 2 and argv[2].startswith("192.168"):
     deviceIP = argv[2]
 
 count = 0
