@@ -27,6 +27,7 @@ while True:
         count += 1
 
 packets = {}
+fanpackets = {}
 
 try:
     with open("/home/justin/.broadlinkBlurayControllerPackets", "rb") as file:
@@ -34,6 +35,14 @@ try:
 except:
     print("Failed to open packet dictionary from file.")
     exit(1)
+try:
+    with open("/home/justin/.broadlinkFanAndLightsControllerPackets", "rb") as file:
+        fanpackets = pickle.load(file)
+except:
+    print("Failed to open packet dictionary from file.")
+    exit(1)
+
+packets.update(fanpackets)
 
 try:
     device.send_data(packets[argv[1]])
