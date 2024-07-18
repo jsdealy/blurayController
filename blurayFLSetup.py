@@ -29,6 +29,10 @@ while True:
         count += 1
 
 packets = {
+    "yamahaon": b'x00',
+    "yamahaoff": b'x00',
+    "yamahavolup": b'x00',
+    "yamahavoldown": b'x00',
     "stripon": b'x00',
     "stripoff": b'x00',
     "striporange": b'x00',
