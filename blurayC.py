@@ -32,14 +32,14 @@ fanpackets = {}
 try:
     with open("/home/justin/.broadlinkBlurayControllerPackets", "rb") as file:
         packets = pickle.load(file)
-except:
-    print("Failed to open packet dictionary from file.")
+except Exception as e:
+    print(f"Error: {e}\nFailed to open packet dictionary from file.")
     exit(1)
 try:
     with open("/home/justin/.broadlinkFanAndLightsControllerPackets", "rb") as file:
         fanpackets = pickle.load(file)
-except:
-    print("Failed to open packet dictionary from file.")
+except Exception as e:
+    print(f"Error: {e}\nFailed to open packet dictionary from file.")
     exit(1)
 
 packets.update(fanpackets)
